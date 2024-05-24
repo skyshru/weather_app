@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data</title>
+</head>
+<body>
+    <h1>Weather Data</h1>
+    <ul>
+        {% for airport in weather_data %}
+        <li>
+            <h2>{{ airport.DEST }}</h2>
+            <p>Temperature: {{ airport.temperature }} °C</p>
+            <p>Wind Speed: {{ airport.wind_speed }} m/s</p>
+            <p>Wind Direction: {{ airport.wind_direction }} degrees</p>
+            <p>Visibility: {{ airport.visibility }} meters</p>
+            <p>Humidity: {{ airport.humidity }} %</p>
+            <p>Pressure: {{ airport.pressure }} hPa</p>
+            <p>Cloud Cover: {{ airport.cloud_cover }} %</p>
+            <p>Timestamp: {{ airport.timestamp }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
